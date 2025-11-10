@@ -1,8 +1,8 @@
-# 🤖 Simulador de Máquina de Turing
+# Simulador de Máquina de Turing
 
 Un simulador visual e interactivo de Máquina de Turing desarrollado con Flask, que permite observar el funcionamiento paso a paso y validar 10 expresiones regulares diferentes.
 
-## ✨ Características
+## Características
 
 - **Simulación Visual**: Observa el cabezal moviéndose sobre la cinta en tiempo real
 - **10 Expresiones Regulares**: Patrones predefinidos para validar diferentes tipos de cadenas
@@ -10,7 +10,7 @@ Un simulador visual e interactivo de Máquina de Turing desarrollado con Flask, 
 - **Interfaz Moderna**: Diseño con colores menta y oscuros, completamente responsivo
 - **Animaciones Suaves**: Transiciones fluidas para una mejor experiencia visual
 
-## 🚀 Instalación y Ejecución
+##Instalación y Ejecución
 
 ### Prerrequisitos
 - Python 3.7 o superior
@@ -37,7 +37,7 @@ Un simulador visual e interactivo de Máquina de Turing desarrollado con Flask, 
 4. **Abre tu navegador**
    - Visita: `http://localhost:5000`
 
-## 📋 Expresiones Regulares Incluidas
+##Expresiones Regulares Incluidas
 
 | Patrón | Descripción | Ejemplo Válido |
 |--------|-------------|----------------|
@@ -52,7 +52,7 @@ Un simulador visual e interactivo de Máquina de Turing desarrollado con Flask, 
 | `(ba)*` | Repeticiones de "ba" | `ba`, `baba` |
 | `a(a\|b)*b` | Empieza con "a", termina con "b" | `ab`, `aabb` |
 
-## 🎮 Cómo Usar
+##Cómo Usar
 
 1. **Selecciona una expresión regular** del menú desplegable
 2. **Ingresa una cadena** en el campo de texto
@@ -62,7 +62,7 @@ Un simulador visual e interactivo de Máquina de Turing desarrollado con Flask, 
    - **Auto**: Ejecución automática con pausa
    - **Reiniciar**: Vuelve al estado inicial
 
-## 🏗️ Arquitectura del Proyecto
+##Arquitectura del Proyecto
 
 ```
 Proyecto-3.1/
@@ -79,7 +79,7 @@ Proyecto-3.1/
         └── script.js     # Lógica del frontend
 ```
 
-## 🔧 Componentes Principales
+##Componentes Principales
 
 ### `TuringMachine` (turing_machine.py)
 - Simula el comportamiento de una Máquina de Turing
@@ -95,14 +95,14 @@ Proyecto-3.1/
 - Animaciones suaves del cabezal y la cinta
 - Controles interactivos para la simulación
 
-## 🎨 Diseño Visual
+##Diseño Visual
 
 - **Colores**: Paleta menta (#a7f3d0, #6ee7b7, #34d399) con fondo oscuro
 - **Animaciones**: Transiciones CSS suaves y efectos hover
 - **Responsivo**: Adaptable a dispositivos móviles y desktop
 - **Accesibilidad**: Contrastes adecuados y navegación por teclado
 
-## 🧪 Casos de Prueba Sugeridos
+##Casos de Prueba Sugeridos
 
 ### Patrón: `(a|b)*abb`
 - ✅ Válidas: `abb`, `aabb`, `babb`, `ababb`
@@ -112,17 +112,9 @@ Proyecto-3.1/
 - ✅ Válidas: ``, `0`, `1`, `001`, `0011`
 - ❌ Inválidas: `10`, `010`, `101`
 
-## 📝 Notas Técnicas
+##Notas 
 
 - **Prevención de loops**: Límite de 1000 pasos por simulación
 - **Optimización**: Código minimalista sin funcionalidades innecesarias
 - **Compatibilidad**: Funciona en Windows, macOS y Linux
 - **Rendimiento**: Carga rápida y animaciones fluidas
-
-## 🤝 Contribuciones
-
-Este proyecto fue desarrollado como parte del curso de Lenguajes Formales y Autómatas. Las mejoras y sugerencias son bienvenidas.
-
-## 📄 Licencia
-
-Proyecto académico - Universidad Rafael Landívar
