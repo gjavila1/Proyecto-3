@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Máquina de Turing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulador de Máquina de Turing</h1>
+            <p>Visualiza el funcionamiento paso a paso de una Máquina de Turing</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="input-string">Cadena de entrada:</label>
+                <input type="text" id="input-string" placeholder="Ingresa tu cadena aquí">
+            </div>
+            
+            <div class="input-group">
+                <label for="pattern-select">Expresión regular:</label>
+                <select id="pattern-select">
+                    {% for key, pattern in patterns.items() %}
+                    <option value="{{ key }}">{{ pattern.name }} - {{ pattern.description }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="button-group">
+                <button id="simulate-btn" class="btn primary">Simular</button>
+                <button id="step-btn" class="btn secondary" disabled>Manual</button>
+                <button id="auto-btn" class="btn secondary" disabled>Auto</button>
+                <button id="reset-btn" class="btn danger" disabled>Reiniciar</button>
+            </div>
+        </div>
+
+        <div class="machine-display" id="machine-display" style="display: none;">
+            <div class="state-info">
+                <div class="current-state">
+                    Estado: <span id="current-state">-</span>
+                </div>
+                <div class="step-counter">
+                    Paso: <span id="step-counter">0</span>
+                </div>
+            </div>
+            
+            <div class="tape-container">
+                <div class="tape" id="tape"></div>
+                <div class="head" id="head">🢃</div>
+            </div>
+            
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="info-panel">
+            <h3>Información sobre la expresión regular</h3>
+            <div id="pattern-info">
+                <p>Selecciona una expresión regular y una cadena para comenzar la simulación.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+@echo off
+echo 🤖 Iniciando Simulador de Máquina de Turing...
+echo.
+echo Instalando dependencias...
+pip install -r requirements.txt
+echo.
+echo Iniciando servidor Flask...
+python app.py
+pause

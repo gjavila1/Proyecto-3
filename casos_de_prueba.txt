@@ -1,0 +1,270 @@
+🧪 CASOS DE PRUEBA - SIMULADOR DE MÁQUINA DE TURING
+================================================================
+
+📋 INSTRUCCIONES:
+1. Ejecuta el simulador: python app.py
+2. Abre http://localhost:5000
+3. Selecciona el patrón correspondiente
+4. Ingresa la cadena de prueba
+5. Observa si es ACEPTADA ✅ o RECHAZADA ❌
+
+================================================================
+
+🔸 PATRÓN 1: (a|b)*abb - "Cadenas que terminan en abb"
+
+✅ CASOS VÁLIDOS (deben ser ACEPTADOS):
+abb
+aabb
+babb
+ababb
+baabb
+bbabb
+aababb
+bababb
+
+❌ CASOS INVÁLIDOS (deben ser RECHAZADOS):
+ab
+ba
+abba
+abbc
+a
+b
+aa
+bb
+abab
+
+================================================================
+
+🔸 PATRÓN 2: 0*1* - "Ceros seguidos de unos"
+
+✅ CASOS VÁLIDOS:
+(cadena vacía)
+0
+1
+00
+11
+01
+001
+011
+0011
+00111
+
+❌ CASOS INVÁLIDOS:
+10
+010
+101
+110
+0101
+1010
+
+================================================================
+
+🔸 PATRÓN 3: (ab)* - "Repeticiones de ab"
+
+✅ CASOS VÁLIDOS:
+(cadena vacía)
+ab
+abab
+ababab
+abababab
+
+❌ CASOS INVÁLIDOS:
+a
+b
+aa
+bb
+aba
+bab
+ababa
+ababb
+
+================================================================
+
+🔸 PATRÓN 4: 1(01)*0 - "Empieza con 1, termina con 0"
+
+✅ CASOS VÁLIDOS:
+10
+1010
+101010
+10101010
+
+❌ CASOS INVÁLIDOS:
+1
+0
+11
+00
+01
+101
+1001
+1100
+
+================================================================
+
+🔸 PATRÓN 5: (a+b)*a(a+b)* - "Contiene al menos una a"
+
+✅ CASOS VÁLIDOS:
+a
+ab
+ba
+aa
+aaa
+bab
+aba
+abab
+baab
+aabb
+
+❌ CASOS INVÁLIDOS:
+(cadena vacía)
+b
+bb
+bbb
+bbbb
+
+================================================================
+
+🔸 PATRÓN 6: a*b* - "Aes seguidas de bes"
+
+✅ CASOS VÁLIDOS:
+(cadena vacía)
+a
+b
+aa
+bb
+ab
+aab
+abb
+aaab
+aabb
+aaabb
+
+❌ CASOS INVÁLIDOS:
+ba
+aba
+bab
+abab
+baba
+
+================================================================
+
+🔸 PATRÓN 7: (aa)* - "Número par de aes"
+
+✅ CASOS VÁLIDOS:
+(cadena vacía)
+aa
+aaaa
+aaaaaa
+aaaaaaaa
+
+❌ CASOS INVÁLIDOS:
+a
+aaa
+aaaaa
+aaaaaaa
+ab
+aab
+
+================================================================
+
+🔸 PATRÓN 8: 0+1+ - "Al menos un 0 y un 1"
+
+✅ CASOS VÁLIDOS:
+01
+001
+011
+0011
+00111
+000111
+
+❌ CASOS INVÁLIDOS:
+(cadena vacía)
+0
+1
+00
+11
+10
+010
+101
+
+================================================================
+
+🔸 PATRÓN 9: (ba)* - "Repeticiones de ba"
+
+✅ CASOS VÁLIDOS:
+(cadena vacía)
+ba
+baba
+bababa
+babababa
+
+❌ CASOS INVÁLIDOS:
+a
+b
+ab
+aa
+bb
+bab
+aba
+babab
+
+================================================================
+
+🔸 PATRÓN 10: a(a|b)*b - "Empieza con a, termina con b"
+
+✅ CASOS VÁLIDOS:
+ab
+aab
+abb
+aabb
+abab
+abbb
+aaab
+aabab
+abbab
+
+❌ CASOS INVÁLIDOS:
+a
+b
+ba
+aa
+bb
+aba
+bab
+abba
+
+================================================================
+
+🎯 CASOS ESPECIALES PARA PROBAR:
+
+🔹 Cadenas largas:
+- aaaaaaaaaaaabb (patrón 1)
+- 000000111111 (patrón 2)
+- abababababab (patrón 3)
+
+🔹 Cadenas límite:
+- (cadena vacía) - prueba con varios patrones
+- Caracteres únicos: a, b, 0, 1
+
+🔹 Casos complejos:
+- ababbabbabb (patrón 1)
+- aabaabaab (patrón 5)
+- aaaaaabbbbbb (patrón 6)
+
+================================================================
+
+💡 CONSEJOS PARA PRUEBAS:
+
+1. Prueba primero casos simples, luego complejos
+2. Usa el modo "Paso a Paso" para entender el proceso
+3. Observa cómo se mueve el cabezal en la cinta
+4. Nota los cambios de estado durante la simulación
+5. Verifica que los casos inválidos sean rechazados correctamente
+
+================================================================
+
+🚨 NOTA IMPORTANTE:
+- Si una simulación toma más de 1000 pasos, se detendrá automáticamente
+- Usa solo los caracteres válidos para cada patrón (a,b para algunos, 0,1 para otros)
+- La cadena vacía se representa simplemente no escribiendo nada
+
+================================================================
